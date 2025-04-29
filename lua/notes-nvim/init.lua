@@ -46,7 +46,7 @@ local function open_floating_file(opts)
     vim.api.nvim_buf_set_name(buf, expand_path)
   end
 
-  vim.bo[buf].swap_file = false
+  vim.bo[buf].swapfile = false
 
   local win = vim.api.nvim_open_win(buf, true, win_config(opts))
 
