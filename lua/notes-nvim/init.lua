@@ -26,7 +26,7 @@ local function win_config(opts)
     width = width,
     height = height,
     col = center_in(vim.o.columns, width),
-    row = center_in(vim.o.line, height),
+    row = center_in(vim.o.lines, height),
     border = opts.border
   }
 end
