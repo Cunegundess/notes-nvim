@@ -1,6 +1,6 @@
 local M = {}
 
-local default_ops = {
+local default_opts = {
   target_file = "~/Documentos/notes/notes.md",
   border = "single"
 }
@@ -64,7 +64,7 @@ local function open_floating_file(opts)
 end
 
 local function setup_user_commands(opts)
-  opts = vim.tbl_deep_extend("force", default_ops, opts)
+  opts = vim.tbl_deep_extend("force", default_opts, opts or {})
 
   vim.api.nvim_create_user_command("Notes", function()
     open_floating_file(opts)
